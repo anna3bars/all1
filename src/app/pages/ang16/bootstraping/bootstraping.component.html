@@ -1,0 +1,107 @@
+<img src="/assets/img/ang16/bootstraping/01.png" alt="">
+<p class="descrip">
+ when the angular project starts when it runs first it load
+ index.html file in browser 
+</p>
+<img src="/assets/img/ang16/bootstraping/02.png" alt="">
+<img src="/assets/img/ang16/bootstraping/03.png" alt="">
+<p>ng build</p>
+<img src="/assets/img/ang16/bootstraping/04.png" alt="">
+<p>
+ runtime.js -> webpack runtime file <br> 
+ // վեբ փաթեթի գործարկման ժամանակի ֆայլ //
+</p>
+<p>
+ polyfills.js -> it is polyfills script fpr supporting the variety [բազմազանություն]
+ of the latest modern browsers, basically not al the browsers can support the 
+ modern JavaScript. So in order to make them supported in older browsers 
+ what we need to do is we need to polyfill them
+</p>
+<p>
+ main.js -> is basically the code of application <br>
+ We are going to write our angular application in ts but 
+ when we will compile that ts code it will be converted into js so 
+ this main.js it is going to contain  that js code 
+</p>
+<p>
+ then there is another js file which gets injected [ներարկվել է] by the angular cli 
+ called as vendor.js and vendor.js contains the scripts 
+ from the angular core library and also the other third-party 
+ liabraries which we are using in our angular application 
+</p>
+<p>
+ style.css -> but the style.css it will be first bundled [փաթեթավորված] into a js code and 
+ then it will be injected to index.html 
+</p>
+<h4>
+ the angular cli uses webpack as a module bundler [փաթեթավորող], so basically webpack 
+ is a bundler which scans our application looking js files and merges them into one js file 
+</h4>
+<p>
+ webpack has the ability  to bundle any kind of files like it can bundle 
+ js file, css files, images, html etc...
+</p>
+<h2>
+ And once the angular cli has these bundled [ներարկել] files, it injects the bundle 
+ js and css files in the index.html
+</h2>
+<img src="/assets/img/ang16/bootstraping/05.png" width="100%" alt="">
+<p class="descrip">
+ now from where angular will come to know what is the <br>
+ entry point [մուտքի կետ] <br> for that angular 
+ application -> <br> 
+ for that it searches the angular.json file
+</p>
+<img src="/assets/img/ang16/bootstraping/06.png" alt="">
+<p>
+ from here now angular will go to main.ts file
+</p>
+<img src="/assets/img/ang16/bootstraping/07.png" width="100%" alt="">
+<p>
+ this platformBrowserDynamic is a module responsible for loading the angular application 
+ in the desktops browser , <br>
+ so angular application can be bootstrapped in many ways and in many platforms,
+ for example we can also load our angular application in mobile devices with ionic 
+ or native script , so if we are using native script then we will be using platform 
+ native script dynamic <br>
+ But since we want to run this application in the browser we are using  platformBrowserDynamic 
+</p>
+<h2>
+ the angular application is organized as modules, every application build in angular 
+ must have at least one module !!!!!!!!!!!!
+</h2>
+<p class="descrip">
+ and the module which gets loaded first when the application is 
+ loaded in the browser is called as root module
+</p>
+<p>
+ line 6 ->  will load the app.module.ts
+</p>
+<img src="/assets/img/ang16/bootstraping/08.png" width="100%" alt="">
+<h4>app.module.ts</h4>
+<p>
+ declarations -> in this we need to specify the directives components,
+  pipes which belongs to this app module
+</p>
+<p>
+ imports -> all external [արտաքին] modules which is required dfor this 
+ angular application and standalone components
+</p>
+<p>
+ providers -> we register all our services of our angular application
+</p>
+<p>
+ bootstrap -> we specify the components that the angular should load 
+ when this app module is loaded <br>
+ and the component which we specify here that component must be a part 
+ of this module
+</p>
+<img src="/assets/img/ang16/bootstraping/09.png" width="100%" alt="">
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+<app-toolbar (change)="change($event)"></app-toolbar>
+<div class="container">
+    <div class="choose">
+        <!-- <div *ngFor="let item of searchArray">
+            <a [routerLink]="''+item.val">{{item.val}}</a>
+        </div>
+        <button (click)="button()">Observable <span [ngClass]="{'rotate': rot, 'default': !rot}">&#62;</span></button> -->
+        <div *ngFor="let item of searchArray">
+            <button *ngIf="!item.in" (click)="button()" (click)="item.ngifValue = !item.ngifValue">
+                {{item.button}}
+                <span [ngClass]="{'rotate': rot, 'default': !rot}">&#62;</span>
+            </button>
+            <a *ngIf="item.in" [routerLink]="item.in" class="buttonA">{{item.button}}</a>
+            <div *ngIf="item.ngifValue">
+                <div class="butCont" *ngFor="let i of item.input">
+                    <a [routerLink]="i.value">{{i.name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="content">
+    <!-- <app-toolbar (change)="change()"></app-toolbar> -->
+    <div class="cont">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="path">
+        <div *ngFor="let item of searchArray">
+            <ul>
+                <li class="butCont" *ngFor="let i of item.input">
+                        <a [routerLink]="i.value" class="pathA">{{i.name}}</a>
+
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</div>

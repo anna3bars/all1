@@ -1,0 +1,9 @@
+.important {
+ background-color: #f3f3f3;
+ color: orangered;
+ font-weight: 800;
+ padding: 9px;
+ border-radius: 15px;
+}
+
+

@@ -1,0 +1,51 @@
+<p class="descrip">
+ In angular when we navigate from ne route to another route,
+ there is a sequence /հաջորդականությունը/ of navigation events
+ that are triggered by the angular router
+</p>
+<p>
+ We can also see what are the events triggered /գործարկվել է/
+ when we navigate from one route to another route, and to 
+ do that we need to enable tracing
+</p>
+<img src="/assets/img/ang/navigationEvents/01.png" alt="">
+<p>
+ it will log all navigation events, which will get triggered 
+ when navigating from one route to another route, into the 
+ browse's developer console
+</p>
+<app-carousel [images]="images"></app-carousel>
+<p>------------------------------------------------------------------------------------------------------------</p><hr>
+<p>------------------------------------------------------------------------------------------------------------</p><hr>
+<app-carousel [images]="images2"></app-carousel>
+<p>
+ But we want to display this loading indicator when we navigate from 
+ one route to another route , as I mentioned we can write some logic 
+ when a navigation event happens and for that we need to subscribe
+ to the navigatio  events 
+</p>
+<p class="descrip">
+ navigation events are available on router object 
+</p>
+<p>
+ I'm going to inject an istance of router class
+</p>
+<ul>
+ <li>in constructor -> private router: Router</li>
+ <li>
+  and import it from 
+  <img src="/assets/img/ang/navigationEvents/05.png" alt="" class="router" >
+ </li>
+</ul>
+<p>
+ This router has an event property, and in ngOnInit we will use it
+</p>
+<p>this.router.events will return an observable</p>
+
+
+
+
+
+
+
+

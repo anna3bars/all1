@@ -1,0 +1,58 @@
+<p>
+ Whenever we create a new pipe in Angular that pipe is a pure pipe. We can also set the pipe as pure or impure explicitely by setting pure property of pipe decorator to true or false respectively.
+<br>
+Angular executes a pure pipe only when it detects a pure change to the input value. A pure change is either 
+<br>- a change to a primitive input value (String, Number, Boolean) or
+<br>- a changed object reference (Array, Date, Object)<br>
+A pure pipe is not executed if the input to the pipe is a reference type like object and only the property values of the object has change but not the reference.
+<br>
+So pure pipes are fast, but using them for filtering data is not a good idea because, the filtering may not work as expected if the source data is updated without a change to the object reference.
+<br>
+Let's understand pure pipe with some examples in this lecture.
+</p>
+<hr>
+<h4>
+ A pure change is either a change pf a pimitive input value
+ (String, Boolean, Number etc.)
+</h4>
+<app-carousel [images]="images"></app-carousel>
+<h4>
+ A pure change is also a change in reference of reference types
+ (Array, Objects, Functions etc)
+</h4>
+<p class="p">
+ When the people click on the add student button, <span>
+  a new student will be added in 
+  the same student array, so the  is not changing,
+  it is a impure change
+ </span>
+</p>
+<app-carousel [images]="images2"></app-carousel>
+<p>
+ for solving this problem we need to change the 
+ referenc/ссылка/
+</p>
+<ul>
+ <li>to create a coppy of this student array </li>
+</ul>
+<img src="/assets/img/ang/pipes/purePipe/09.png" alt="img">
+<h4>A pure change is not when the input is a reference type and only
+ its property value changes and not the reference//<br>
+ Чистое изменение — это не когда входные данные являются ссылочным типом и только
+  меняется значение его свойства, а не ссылка
+</h4>
+<app-carousel [images]="images3"></app-carousel>
+<p>for solving this problem</p>
+<img src="/assets/img/ang/pipes/purePipe/15.png" alt="img">
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<h2>How to create Router guard</h2>
+<ol>
+ <li>Create a route guard as a service</li>
+ <li>Implement the respective route guard interface</li>
+ <li>Implement the required route guard method -> 
+  <p>And from within /ներսում/ this method we mneed to return a boolean value
+   either /կամ/ true or false
+  </p>
+  <p class="descrip2"> 
+   if we return true from this method in that case the navigation process will continue <br>
+   But if we returmn false from here in that case the navigation process will stop And
+   the user will not be redirected to that route
+  </p>
+ </li>
+</ol>
+<app-carousel [images]="images"></app-carousel>
+<p>And these 3 steps are same for imploementing all the route guards</p>

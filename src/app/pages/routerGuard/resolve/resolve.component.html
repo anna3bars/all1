@@ -1,0 +1,35 @@
+<p class="descrip">
+ the resolve route guard allows us to load the data before
+ we navigate to a route
+</p>
+<app-carousel [images]="images"></app-carousel>
+<p>
+ here we simply trying to simulate the HTTP request and response
+ Behaviour, because we know that when we make a request to the server,
+ server might take some time to sending us the response, so 
+ we are just trying to simulate that
+</p>
+<p class="important">
+ So the problem here is now when we navigate to this
+ courses page for the 5 seconds when the data is not
+ available, it is displaying an empty view, it is 
+ only displaying the course list after 5 seconds
+</p>
+<p class="descrip">
+ we know that the data will be available only after 
+ 5 seconds so what we want is, we want to load the data 
+ and once the data is loaded then only we want
+ to navigate the user to this courses link, so when I 
+ click on this courses link after 5 seconds -----when the data 
+ is available ---- then only I should be redirected to this
+ courses page
+</p>
+<p>
+ for that we can use resolve route guard
+</p>
+
+<app-carousel [images]="images2"></app-carousel>
+
+
+
+

@@ -1,0 +1,38 @@
+<h2>Both setValue and patchValue method is used to set values for form control.</h2>
+<app-carousel [images]="images"></app-carousel>
+<p class="descrip">
+ the object which we passed to the setValue method the structure
+ of that object must match the structure of the value object here
+</p>
+<p class="summary"> 
+ When we use setValue to set values for form control, we need to pass the exact 
+ structure of form object and form group to setValue method. If the structure does
+  not match, angular will throw an error. So, we can use setValue method, when we
+   want to set value for all the form controls in a form.
+ <br><br>
+ On the other hand, we can use patchValue when we want to set value for some of the
+ form controls. Here, we do not need to pass the exact structure of form object. 
+ Instead, we can pass the structure of form control whose value we want to set.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

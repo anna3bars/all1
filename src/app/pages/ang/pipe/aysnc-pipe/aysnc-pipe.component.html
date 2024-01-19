@@ -1,0 +1,139 @@
+<p class="descrip">
+ We use async pipe to handle asynchronous data in Angular.
+</p>
+<p>
+ So we have learned that an observable or a promise returns 
+ ]an asynchronous data, and that asynchronous data can be handled using 
+ aysnc pipe
+</p>
+<p>
+ now what I want is before this table I also want to show 
+ the total number of students which we have in this table 
+</p>
+<div class="preToolbar">
+ <button (click)="changeCode('one')">app.component.ts</button>
+ <button (click)="changeCode('two')">app.component.html</button>
+</div>
+<pre>
+ <code class="language-js" [ngClass]="{'static': one}">
+  import &#123; Component &#125; from '&#64;angular/core';
+import &#123; CommonModule &#125; from '&#64;angular/common';
+import &#123; RouterOutlet &#125; from '&#64;angular/router';
+import &#123; Student &#125; from './student';
+import &#123; StudentsService &#125; from './students.service';
+import &#123; FormsModule &#125; from '&#64;angular/forms';
+import &#123; FilterPipe &#125; from './filter.pipe';
+import &#123; PercentagePipe &#125; from './percentage.pipe';
+
+&#64;Component(&#123;
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, FormsModule, FilterPipe,
+    PercentagePipe],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+  &#125;)
+export class AppComponent &#123;
+  title = 'AngularPipes2';
+  students!: Student[];
+  totalMarks!: number;
+  _filterString: string = ''; 
+  filteredStudents: Student[] = this.students;
+  // 1
+  totalStudents = new Promise((resolve, reject)=>&#123;
+    setTimeout(()=>&#123;
+      resolve(this.filteredStudents.length)
+      &#125;, 2000)
+      &#125;)
+  // so here to the totalStudents property we are assigning an asynchronous 
+  // data, this data will be assigned the length of this filtered 
+  // studeny's property will be assigned to this totalStudents after
+  // 2000 milliseconds, that's because the promise will resolve after 2000 milliseconds
+
+  
+  get filterString()&#123;
+    return this._filterString;
+    &#125;
+  set filterString(value: string)&#123;
+    this._filterString = value;
+    this.filteredStudents = this.filterStudentByGender(value)
+    &#125;
+
+  constructor(private studentService: StudentsService)&#123;&#125;
+
+  ngOnInit(): void &#123;
+    this.students = this.studentService.students;
+    this.totalMarks = this.studentService.totalMarks;
+    this.filteredStudents =  this.students;
+    &#125;
+  // app.component.ts
+  AddDummyStudent()&#123;
+    this.students.push(&#123; name: 'TEST', course: 'TEST', marks: 520,
+    DOB: new Date('11-12-1997'), gender: 'Female'&#125;,)
+    this.filteredStudents = this.filterStudentByGender(this._filterString)
+    &#125;
+
+  ChangeGender()&#123;
+    this.students[0].gender = 'Female';
+    this.filteredStudents = this.filterStudentByGender(this._filterString)
+    &#125;
+  onMouseMove()&#123;&#125;
+  filterStudentByGender(filterTerm: string)&#123;
+    if(this.students.length === 0 || filterTerm === '')&#123;
+      return this.students;
+      &#125; else &#123;
+      return this.students.filter((student) => &#123;
+       if(filterTerm == 'male')&#123;
+        return student.gender.toLowerCase() === filterTerm.toLowerCase();
+        
+        &#125;
+       return student.gender.toLowerCase().includes(filterTerm.toLowerCase()) 
+       &#125;)
+       &#125;
+       &#125;
+       &#125;
+
+
+
+ </code>
+ <code  class="language-html" [ngClass]="{'static': two}">
+   'adding this (below) to show totalStudents '
+   &lt;div&#62;
+   &lt;h3&#62;Total Students: &#123;&#123;'totalStudents'&#125;&#125;&lt;/h3&#62;
+   &lt;/div&#62;
+ 
+
+ </code>
+</pre>
+<p>
+ but it showing this
+</p>
+<img src="/assets/img/ang/pipes/aysnc/01.png" alt="">
+<p>
+ for this we are using async pipe
+</p>
+<pre class="preSmall">
+ <code  class="language-html static" >
+  'adding this (below) to show totalStudents '
+  &lt;div&#62;
+  &lt;h3&#62;Total Students: &#123;&#123;'totalStudents | async&#125;&#125;&lt;/h3&#62;
+  &lt;/div&#62;
+
+
+</code>
+</pre>
+<p>
+ in the beginning /սկզբում its empty
+</p>
+<img src="/assets/img/ang/pipes/aysnc/02.png" alt="">
+<p>
+ but after 2000 miliseconds when the information is available it showing
+</p>
+<img src="/assets/img/ang/pipes/aysnc/03.png" alt="">
+<p class="descrip">
+ so this async pipe waits for the value to be available 
+ and then it displays the data
+</p>
+
+
+

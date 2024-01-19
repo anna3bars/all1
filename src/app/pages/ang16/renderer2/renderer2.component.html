@@ -1,0 +1,57 @@
+<img src="/assets/img/ang16/48renderer2/01.png" alt="">
+<h4>
+ now here the native element property it contains a reference 
+ to a underlying DOM object, when we use this nativeElement property  
+ it gives us a direct access to the DOM
+</h4>
+<p class="descrip">
+ now there is nothing wrong  with this approach, BUT oit is not advisible 
+ -> to access the DOM objject directly and manipulate it, there are several reasons 
+ for it
+</p>
+<img src="/assets/img/ang16/48renderer2/02.png" width="95%" alt="">
+<h4>
+ We are going to learn about a better way of manipulating the DOM 
+ without accesing it directly, and that is by uysing Renderer2 class
+</h4>
+<img src="/assets/img/ang16/48renderer2/03.png" width="95%">
+<img src="/assets/img/ang16/48renderer2/04.png" >
+<p>
+ երբոր մենք կգրենք private renderer: Renderer2, behine the scene 
+ it will create a property called renderer like we are doing here, 
+ and then it will also assign that private property with the value 
+ which we have received for this renderer parameter 
+
+</p>
+<img src="/assets/img/ang16/48renderer2/05.png" >
+<h2>
+ for setting some styes -> for that we have a method setStyle ->
+ this.renderer.setStyler()
+</h2>
+<p>
+ this setStyle() method takes 3 required parameters
+</p>
+<ol>
+ <li>
+  thi first parameter will be the element on which we want to 
+  set the style -> this.element.nativeElement
+ </li>
+ <li>
+  the second argument is the style which we want to set as string
+   ('backgroundColor')
+ </li>
+ <li>
+  the value of style
+ </li>
+</ol>
+<img src="/assets/img/ang16/48renderer2/06.png" >
+<img src="/assets/img/ang16/48renderer2/07.png" width="100%" >
+<p>
+ we can also set some attributs
+</p>
+<img src="/assets/img/ang16/48renderer2/08.png" width="100%">
+
+
+
+
+

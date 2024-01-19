@@ -1,0 +1,144 @@
+<p class="descrip">
+ in angular there are two ways to create a form 
+</p>
+<img src="/assets/img/ang/forms/01.png" alt="">
+<h2>Template Driven Form  in Angular</h2>
+<div>
+ to work with forms in angular the first thing which we need to do is 
+ <p class="imp">
+  in the app.module.ts in imports array -> FormsModule
+ </p>
+ <p>
+  and we imporing it from &#64;angular/forms
+ </p>
+</div>
+<div class="preToolbar">
+ <button (click)="changeCode('one')">app.component.ts</button>
+ <button (click)="changeCode('two')">app.component.html</button>
+</div>
+<pre>
+ <code class="language-js" [ngClass]="{'static': one}">
+  import &#123; Component &#125; from '&#64;angular/core';
+
+&#64;Component(&#123;
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+  &#125;)
+  export class AppComponent &#123;
+    title = 'angularForms';
+    onSubmit(form: HTMLFormElement)&#123;
+      console.log(form);
+    &#125;
+  &#125;
+
+ </code>
+ <code  class="language-html" [ngClass]="{'static': two}">
+  &lt;div class="form"&gt;
+  &lt;h2 id="registration"&gt;Registration Form&lt;/h2&gt;
+   '(ngSubmit)="onSubmit(myForm)"'
+   &lt;form  #myForm&gt;
+   &lt;label for="fname"&gt;First Name&lt;/label&gt;
+   &lt;input type="text" id="fname" placeholder="Your name.."&gt;
+ 
+   &lt;label for="lname"&gt;Last Name&lt;/label&gt;
+   &lt;input type="text" id="lname" placeholder="Your last name.."&gt;
+ 
+   &lt;label for="email"&gt;Email&lt;/label&gt;
+   &lt;input type="email" id="email" placeholder="Your email.."&gt;
+ 
+   &lt;label for="country"&gt;Country&lt;/label&gt;
+   &lt;select id="country"&gt;
+   &lt;option value="australia"&gt;Australia&lt;/option&gt;
+   &lt;option value="canada"&gt;Canada&lt;/option&gt;
+   &lt;option value="usa"&gt;USA&lt;/option&gt;
+   &lt;option value="india"&gt;India&lt;/option&gt;
+   &lt;option value="uk"&gt;UK&lt;/option&gt;
+   &lt;/select&gt;
+ 
+   &lt;label for="gender"&gt;Gender:&lt;/label&gt;
+   &lt;input type="radio" id="male" value="male"&gt;
+   &lt;label for="male"&gt;Male&lt;/label&gt;
+   &lt;input type="radio" id="female" value="female"&gt;
+   &lt;label for="female"&gt;Female&lt;/label&gt;
+   &lt;input type="radio" id="other" value="other" checked&gt;
+   &lt;label for="other"&gt;Other&lt;/label&gt;
+ 
+   &lt;br&gt;&lt;br&gt;
+ 
+   &lt;label&gt;Hobbies &lt;i&gt;(Optional)&lt;/i&gt;&lt;/label&gt;
+   &lt;div class="form-inline"&gt;
+   &lt;label&gt;&lt;input type="checkbox" value="sports"&gt;Sports&lt;/label&gt;
+   &lt;label&gt;&lt;input type="checkbox" value="movies"&gt;Movies&lt;/label&gt;
+   &lt;label&gt;&lt;input type="checkbox" value="music"&gt;Music&lt;/label&gt;
+   &lt;/div&gt;
+ 
+   &lt;input type="submit" value="submit" id="btn"&gt;
+   &lt;/form&gt;
+   &lt;/div&gt;
+ </code>
+</pre>
+<p>
+ now when we clicking on this submit button it's logging the html 
+ of that form but here instead of logging this form as a javascript object
+ or we can say typescript object
+</p>
+<p>
+ for this to this local reference variable (#myForm) we assign a string called
+ ngForm
+</p>
+<div class="preToolbar">
+ <button (click)="changeCode('one')">app.component.ts</button>
+ <button (click)="changeCode('two')">app.component.html</button>
+</div>
+<pre class="preSm">
+ <code class="language-js" [ngClass]="{'static': one}">
+  onSubmit(form: NgForm)&#123;
+   console.log(form);
+   &#125;
+  // and we also need to import it 
+  import &#123; NgForm &#125; from '&#64;angular/forms';
+ </code>
+ <code class="language-js" [ngClass]="{'static': two}">
+  &lt;form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm"&gt;&lt;/form&gt;
+ </code>
+</pre>
+<p class="descrip">
+ So here we are getting this form as an object but in that object we dont have
+ these controls
+</p>
+<h6>for that we need to do 2 changes </h6>
+<ol>
+ <li>
+  for each of these input elements we need to specify the name
+ </li>
+ <li>
+  write ngModel in this input
+ </li>
+</ol>
+<p class="descrip">
+ this ngModel will simply tell angular that this element - this input element 
+ is a control of this form
+</p>
+<pre class="preSm2">
+ <code class="language-html static">
+  &lt;input type="text" id="fname" placeholder="Your name.." 
+   name="firstname" ngModel&gt;
+ </code>
+</pre>
+<img src="/assets/img/ang/forms/02.png" alt="">
+<img src="/assets/img/ang/forms/03.png" alt="">
+<p>
+ after filling the form and clicking in the submit button
+</p>
+<img src="/assets/img/ang/forms/04.png" alt="">
+<img src="/assets/img/ang/forms/05.png" alt="">
+<p>
+ we can do this all using ViewChild decorator
+</p>
+<img src="/assets/img/ang/forms/06.png" alt="">
+<img src="/assets/img/ang/forms/07.png" alt="">
+
+
+
+

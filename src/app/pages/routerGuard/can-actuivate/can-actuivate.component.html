@@ -1,0 +1,27 @@
+<p class="descrip">
+ CanActivate Route Guard decides if a route can be activated or not. This
+ Route Guard can be used in cases where the user is not authizored to navigate
+ to the target route.
+</p>
+<p>src/app-ի մեջ ստեղծել guard թղթապանակ </p>
+<p>
+ $ ng g g account <br>
+ CREATE src/guards/account.guard.spec.ts (473 bytes)<br>
+ CREATE src/guards/account.guard.ts (131 bytes)
+</p>
+<div class="descrip">
+ the difference between canActivate route guard and CanActivateChild route guard is - 
+ is that when we use CanActivate route guard on a routeer, that route guard is only 
+ applied to that router, it is not applies to its child routes. But when
+ we use CanActivateChild route guard on a route, in that case that route guard 
+ will be applied to all the child routes, it will not get applied to the 
+ parent route
+</div>
+<img src="/assets/img/ang/routeGuard/04.png" alt="">
+
+
+
+
+
+
+

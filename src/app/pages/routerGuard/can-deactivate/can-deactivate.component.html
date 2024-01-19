@@ -1,0 +1,29 @@
+<div class="descrip">
+ CanDeactivate Route Guard deacides weather a user can navigate away from a route or not
+</div>
+<p>
+ example of using <br>
+ so let's say the user has filled the data in the in the form,
+ and then he tries to leavve the view without saving the work
+</p>
+<app-carousel [images]="images"></app-carousel>
+<p>ngmodel ->  two way data binding</p>
+<p>Nowm this CanDeactivate guard we can only use in ContactComponent, nut
+ if we want to use it in other component...
+</p>
+<p>We need to create an interface</p>
+<img src="/assets/img/ang/routeGuard/09.png" alt="">
+<p>
+ And now in whichever component we want to use this CanDeactivate route
+ guard, that component should implement this IDeactivateComponent interface
+
+</p>
+<p>
+ and that IDeactivateComponent interface declaring/հայտարարել/ this 
+ canExit method, so we also need to implement that method inside 
+ this contact compoonent class. <br>
+ we are already doing this
+</p>
+<img src="/assets/img/ang/routeGuard/10.png" alt="">
+
+

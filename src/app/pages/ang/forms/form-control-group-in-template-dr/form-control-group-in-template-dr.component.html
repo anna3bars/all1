@@ -1,0 +1,24 @@
+<p class="descrip">
+ It is also possible to group some of these form controls together
+</p>
+<ol>
+ <li>we need to create a container</li>
+ <li>paste in it the controls -> inputs that we want to group</li>
+ <li>on this containre div we need to add an angular directive 
+  called ngModelGroup
+ </li>
+ <li>
+  and to this ngModelGroup we can specify a name <br>
+ </li>
+</ol>
+<app-carousel [images]="images"></app-carousel>
+<p class="important">
+ Now you might ask what is the advantage of grouping form controls together?
+ <br>
+ So without grouping we will have to add validation on each of these form 
+ controls, BUT if we group some of the form controls, in that case 
+ we can validate them together  
+</p>
+
+
+

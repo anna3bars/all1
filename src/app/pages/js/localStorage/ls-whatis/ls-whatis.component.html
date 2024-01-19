@@ -1,0 +1,49 @@
+<div class="descrip">
+ Local Storrage это локально хранилище, которая находиться в вашем
+ браузере, вы там можете можете хранить любые данние и они будут доступны у
+ вас после перезагрузки страницы
+</div>
+<p>
+ то есть это локальная и импровизирования база данных для именно вашего браузера
+</p>
+<p>
+ в node нет local storage, это только браузерный api, 
+ он доступен в обьекте window
+</p>
+<img src="/assets/img/js/localStorage/01.png" alt="">
+<p>
+ чтобы что то получить из local storrage мы вызываем метод getItem()
+</p>
+<app-carousel [images]="images"></app-carousel>
+<p>
+ для того чтобы записать что то в local storrage мы вызываем метод setItem(), 
+ которое принимает 2 значение
+</p>
+<ol>
+ <li>
+  первое значение -- это ключ по которому нужно хранить что то
+ </li>
+ <li>
+  второй  аргумент -- это само значение
+ </li>
+</ol>
+<img src="/assets/img/js/localStorage/04.png" alt="">
+<p class="descrip">
+ local storage умеет работать ТОЛЬКО со СТРОКОМИ
+ когда мы передаум не строковую значение он автоматно вызиыает .toString()
+</p>
+<p class="descr">
+ Dev tools -> Application
+</p>
+<p>
+ для удаления <br>
+ localStorage.removeItem('number')
+</p>
+<img src="/assets/img/js/localStorage/05.png" alt="">
+<p>
+ метод который просто берет и полностью очишает local storage
+</p>
+<img src="/assets/img/js/localStorage/06.png" alt="">
+
+
+

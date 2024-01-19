@@ -1,0 +1,25 @@
+.inputCont input {
+ background-color: white;
+ border: 1px solid teal;
+ color: black;
+ padding: 5px;
+}
+.inputCont button {
+ width: fit-content;
+ padding: 5px 73px;
+ background-color: #618763;
+ box-shadow: 1px 2px 11px 0px #a5a5a5;
+}
+.inputCont {
+ margin: auto;
+ padding: 52px 0 550px;
+ text-align: center;
+}
+.cont {
+ background-color: #6f9f9c;
+}
+
+
+
+
+

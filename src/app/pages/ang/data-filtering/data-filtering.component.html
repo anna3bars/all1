@@ -1,0 +1,117 @@
+<p>
+ in the last two lectures we learned what are pure and impure 
+ pipes in angular and why we should not use pipes for filtering 
+ or sorting data , so what we can do
+</p>
+<p class="descrip">
+ We can write filtering or sorting logic in the component 
+ class itself, we don't need a pipe for that 
+</p>
+<pre>
+ <code class="language-js static">
+  --------------------------
+  app.component.ts
+  -------------------------
+  import &#123; Component &#125; from '&#64;angular/core';
+  import &#123; CommonModule &#125; from '&#64;angular/common';
+  import &#123; RouterOutlet &#125; from '&#64;angular/router';
+  import &#123; Student  from './student';
+  import &#123; StudentsService &#125; from './students.service';
+  import &#123; FormsModule &#125; from '&#64;angular/forms';
+  import &#123; FilterPipe &#125; from './filter.pipe';
+  import &#123; PercentagePipe &#125; from './percentage.pipe';
+
+  &#64;Component(&#123;
+   selector: 'app-root',
+   standalone: true,
+   imports: [CommonModule, RouterOutlet, FormsModule, FilterPipe,
+   PercentagePipe],
+   templateUrl: './app.component.html',
+   styleUrl: './app.component.css'
+  &#125;)
+
+  export class AppComponent &#123;
+   title = 'AngularPipes2';
+   students!: Student[];
+   totalMarks!: number;
+   // 1
+   _filterString: string = ''; 
+   filteredStudents: Student[] = this.students;
+  
+   // 2
+   get filterString()&#123;
+    return this._filterString;
+    // when the binding need to read the value
+   &#125;
+   // 3
+   set filterString(value: string)&#123;
+    //this set will called every time the value in filterString 
+    // will be change, and the setter will also receive that value
+    this._filterString = value;
+    // 5
+    this.filteredStudents = this.filterStudentByGender(value)
+   &#125;
+
+   constructor(private studentService: StudentsService)&#123;&#125;
+
+   ngOnInit(): void &#123;
+    this.students = this.studentService.students;
+    this.totalMarks = this.studentService.totalMarks;
+    // 6
+    this.filteredStudents =  this.students;
+   &#125;
+   // app.component.ts
+   AddDummyStudent()&#123;
+    this.students.push(&#123; name: 'TEST', course: 'TEST', marks: 520,
+    DOB: new Date('11-12-1997'), gender: 'Female'&#125;,)
+   &#125;
+
+   ChangeGender()&#123;
+    this.students[0].gender = 'Female'
+   &#125;
+   onMouseMove()&#123;&#125;
+   // 4
+   filterStudentByGender(filterTerm: string)&#123;
+    if(this.students.length === 0 || filterTerm === '')&#123;
+     return this.students;
+    &#125; else &#123;
+     return this.students.filter((student) => &#123;
+     // return student.gender.toLowerCase() === filterText.toLowerCase()
+     if(filterTerm == 'male')&#123;
+      return student.gender.toLowerCase() === filterTerm.toLowerCase();
+     &#125;
+     return student.gender.toLowerCase().includes(filterTerm.toLowerCase()) 
+    &#125;)
+   &#125;
+  &#125;
+ &#125;
+ </code>
+</pre>
+<app-carousel [images]="images"></app-carousel>
+<pre>
+ <code class="language-js static">
+  AddDummyStudent()&#123;
+   this.students.push(&#123; name: 'TEST', course: 'TEST', marks: 520,
+   DOB: new Date('11-12-1997'), gender: 'Female'&#125;,)
+   // update below
+   this.filteredStudents = this.filterStudentByGender(this._filterString)
+   &#125;
+
+  ChangeGender()&#123;
+   this.students[0].gender = 'Female';
+   // update below
+   this.filteredStudents = this.filterStudentByGender(this._filterString)
+   &#125;
+ </code>
+</pre>
+
+
+
+
+
+
+
+
+
+
+

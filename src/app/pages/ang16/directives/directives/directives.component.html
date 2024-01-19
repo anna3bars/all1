@@ -1,0 +1,57 @@
+<h2>we use directivesto manipulate the dom</h2>
+<h4>
+ using directives we tell angular how the DOM element 
+ should behave or look like,  an d also which dom element to 
+ add to the web page and which one to not add 
+</h4>
+<img src="/assets/img/ang16/19directives/01.png" alt="">
+<p class="descrip">
+ component is also a directive but it is a directive with a template !!!
+</p>
+<p>
+ so once we place the selector of our
+ component somewhere in the template at
+ this point of time we are instructing
+ angular to add the content of our
+ components view template and the
+ business logic of the typescript code in
+ that place where we have used the
+ selector of that component
+ so this was our instruction to angular
+ to render The View template of that
+ component at that place where we use the
+ selector
+</p>
+<img src="/assets/img/ang16/19directives/02.png" width="100%" alt="">
+<h4>other types of directives do not have a template</h4>
+<h4>
+ unlike component directive attribute
+ directive does not have a template it
+ does not render anything on the web page
+ neither it removes anything from the web
+ page
+</h4>
+<p>attribute directive
+ it is only going to change the behavior
+ or look of the HTML element on which we
+ have used it it is not going to add or
+ remove that element from the web page
+</p>
+<img src="/assets/img/ang16/19directives/03.png" width="100%" alt="">
+<h4>
+ structural directives can change the
+ Dome layout by adding and removing Dom
+ elements it basically manipulates the
+ Dom by adding or removing Dom elements
+ from the web page
+ and just like attribute directive
+ structural directive also does not have
+a template
+</h4>
+<img src="/assets/img/ang16/19directives/04.png" width="100%" alt="">
+<hr><hr><hr><hr>
+<p>
+ the attributes directive we use in [] brackets
+</p>
+<app-carousel [images]="images"></app-carousel>
+
