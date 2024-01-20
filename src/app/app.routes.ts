@@ -76,6 +76,10 @@ import { NgondestroyComponent } from './pages/ang16/ngondestroy/ngondestroy.comp
 import { OwnDirectiveComponent } from './pages/ang16/own-directive/own-directive.component';
 import { Renderer2Component } from './pages/ang16/renderer2/renderer2.component';
 import { HostlistnerComponent } from './pages/ang16/hostlistner/hostlistner.component';
+import { HostbindingComponent } from './pages/ang16/hostbinding/hostbinding.component';
+import { ViewEncapsulationComponent } from './pages/ang16/view-encapsulation/view-encapsulation.component';
+import { N60serviceComponent } from './pages/ang16/60service/n60service/n60service.component';
+import { N62dependencyInjectionComponent } from './pages/ang16/n62dependency-injection/n62dependency-injection.component';
 
 export const routes: Routes = [
     {
@@ -177,8 +181,15 @@ export const routes: Routes = [
 
                     { path: '48/renderer2', component: Renderer2Component},
 
-                    { path: '49/@hostlistner', component: HostlistnerComponent }
+                    { path: '49/@hostlistner', component: HostlistnerComponent },
+
+                    { path: '50/@hostbinding', component: HostbindingComponent},
+
+                    { path: '59/what-is-view-encapsulation', component: ViewEncapsulationComponent},
                     
+                    { path: '60/service', component: N60serviceComponent},
+
+                    { path: '62/dependency-injection', component: N62dependencyInjectionComponent},
                 ]
             }
         ]

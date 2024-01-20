@@ -1,0 +1,69 @@
+<p class="descrip">
+ a dependency is a relationship between two software components 
+ where on component relies on the other component to work properly.
+ instance
+</p>
+<p class="descrip">
+ Կախվածությունը երկու ծրագրային component-ների միջև հարաբերությունն է,
+  որտեղ component-ը հենվում է մյուս component-ի վրա՝ ճիշտ աշխատելու համար:
+ օրինակ
+</p>
+<p>toolbar.component.ts</p>
+<img src="/assets/img/ang16/62dependencyInjection/01.png" alt="">
+<p>
+ in toolbar component we are creating an instance of this subscribe 
+ service class, and then using this instance we are accesing this on subscribe click 
+ method of that subscribe service class.
+ <br>
+ So in this example the toolbar component is dependent[կախյալ] on this subscribeService <br>
+ In this example this subscribe service it is a dependency [կախվածություն]
+  of this toolbar component
+</p>
+<hr><br>
+<p>
+ at this line we are creating an instance [օրինակ] of subscribeService
+ class, by calling the constructor of subscribeService
+ class <br>
+ Wr are making this toolabar component 
+ <br>class tightly [սերտորեն կապված] <br> 
+ coupled 
+ with this subscribe service class 
+</p>
+<img src="/assets/img/ang16/62dependencyInjection/02.png" alt="">
+<p class="descrip">
+ now tight coupling is noot good because it reduces the flexibility 
+ and reusibility of the code <br>
+ քանի որ այն նվազեցնում է կոդի ճկունությունն ու
+  կրկնակի օգտագործման հնարավորությունը
+</p>
+<h4>
+ when we have changed something inside this  subscribeService
+ class it has broke the functionality of this toolbar component
+</h4>
+<img src="/assets/img/ang16/62dependencyInjection/03.png" alt="">
+<img src="/assets/img/ang16/62dependencyInjection/04.png" alt="">
+<img src="/assets/img/ang16/62dependencyInjection/05.png" width="100%" alt="">
+<hr><hr><br>
+<p class="descrip">
+ to overcame this problems we can use dependency injection
+</p>
+<h4>
+ instead of instantiating the class by ourself we ask 
+ angualr to provide an instance of taht dependency in 
+ that particular class and we can use that injected instance 
+ in order to execute the logic from the service class
+</h4>
+<img src="/assets/img/ang16/62dependencyInjection/06.png" alt="">
+<img src="/assets/img/ang16/62dependencyInjection/07.png" alt="">
+<img src="/assets/img/ang16/62dependencyInjection/08.png" alt="">
+
+
+
+
+
+
+
+
+
+
+

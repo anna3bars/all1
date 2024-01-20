@@ -1,0 +1,69 @@
+<h4>We have learned that the CSS style which we specify for a
+  component, it only gets applied to the HTML elements of that 
+  component and it does not override the CSS style of any other
+   component. This is achievable because
+  of view encapsulation in angular.</h4>
+<img src="/assets/img/ang16/51viewEncapsulation/01.png" width="100%" alt="">
+<p class="descrip">
+ in app.component.css we have write somer styles for button element
+</p>
+<img src="/assets/img/ang16/51viewEncapsulation/02.png">
+<p class="descrip">
+ but that css style has only applied to the button element of app.component
+</p>
+<img src="/assets/img/ang16/51viewEncapsulation/03.png">
+<img src="/assets/img/ang16/51viewEncapsulation/04.png">
+<hr><hr><hr><br>
+<img src="/assets/img/ang16/51viewEncapsulation/05.png" width="100%">
+<h2>by default angular uses emulated view encapsulation</h2>
+<p class="descrip">
+ in this emulated type of view encapsulation angular adds some 
+ unique HTML attributes to the component css style and also to the 
+ HTML elements in order to achieve the view encapsulation
+</p>
+<h4>
+ so for each component there will be a unique attribute which will be added to 
+ each HTML element in that comoponent
+</h4>
+<br>
+<img src="/assets/img/ang16/51viewEncapsulation/first/01.png" alt="">
+<p>if we delete this attribute</p>
+<img src="/assets/img/ang16/51viewEncapsulation/first/02.png" alt="">
+<br>
+<img src="/assets/img/ang16/51viewEncapsulation/first/03.png" alt="">
+<p>now if we pas this attrbut in this</p>
+<img src="/assets/img/ang16/51viewEncapsulation/first/04.png" alt=""><br>
+<img src="/assets/img/ang16/51viewEncapsulation/first/05.png" alt=""><br>
+<img src="/assets/img/ang16/51viewEncapsulation/first/06.png" alt=""><br>
+<hr><hr><br>
+<img src="/assets/img/ang16/51viewEncapsulation/001.png" alt="">
+<p class="descrip">
+ when we use none in that case no view encapsulation will be used,
+ that means whatever css style we have specified for this button element 
+ that will be applied to all the button elements of the child 
+ component
+</p>
+<p>the result is this</p>
+<img src="/assets/img/ang16/51viewEncapsulation/002.png" alt="">
+<p class="descrip">
+ in this time no unique attribute will be used
+</p>
+<hr><hr><br>
+<p>ViewEncapsulation.ShadowDom</p>
+<img src="/assets/img/ang16/51viewEncapsulation/003.png" alt="">
+<img src="/assets/img/ang16/51viewEncapsulation/004.png" alt="">
+<img src="/assets/img/ang16/51viewEncapsulation/005.png" alt="">
+<p>
+ thats because when we use Shadow Dom View Encapsulation for a 
+ component in that case that component creates own DOM -> 
+ the browser keeps the shadow DOM seperate from the main DOM, and the 
+ rendering of the Shadow Dom and the main DOM happens 
+</p>
+
+
+
+
+
+
+
+

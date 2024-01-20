@@ -1,4 +1,4 @@
-.choose {
+.choose, .chooseMobile2 {
     border-right: 1px solid white;
     padding: 11px 15px 0 10px;
     width: 22%;
@@ -9,7 +9,10 @@
     bottom: 0;
     background-color: #303030;
 }
-.choose a {
+.chooseMobile {
+    display: none;
+}
+.choose a, .chooseMobile2 a {
     display: block;
     padding: 5px 6px;
     background-color: lightslategray;
@@ -21,7 +24,7 @@
     text-decoration: none;
     font-size: 14px;
 }
-.choose a:hover {
+.choose a:hover, .chooseMobile2 a:hover {
     background-color: darkgray;
     /* transform: scale(1.05); */
     border: 1px dashed #ffffff82;
@@ -73,8 +76,72 @@ ul, ol {
     font-style: 17px;
 }
 
-
-
+/* -------------------------------------------------- */
+@media only screen and (max-width: 2560px){
+    .choose a, button {
+        font-size: 24px;
+    }
+    .choose {
+        width: 22%;
+    }
+    .content {
+        margin-left: 22%;
+    }
+    * {
+        font-size: 27px;
+    }
+}
+@media only screen and (max-width: 2160px){
+    .pathA {
+        font-size: 18px;
+    }
+    .choose {
+        width: 22%;
+    }
+    .choose a, button {
+        font-size: 23px;
+    }
+    .content[_ngcontent-ng-c2105455472] {
+        margin-left: 22% !important;
+    }
+}
+@media only screen and (max-width: 1760px){
+    .choose a, button {
+        font-size: 20px;
+    }
+    * {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1420px){
+    .choose a, button, * {
+        font-size: 14px;
+    }
+    .pathA {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 1220px){
+    .choose a, button, * {
+        font-size: 13px;
+    }
+    .pathA {
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width: 766px){
+    .path {
+        display: none;
+    }
+    .cont[_ngcontent-ng-c2105455472] {
+        padding: 15px;
+        padding-top: 69px;
+        width: 100% !important
+    }
+    .choose {
+        display: none !important;
+    }
+}
 
 
 

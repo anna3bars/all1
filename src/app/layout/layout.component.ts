@@ -281,6 +281,40 @@ export class LayoutComponent {
         { name: '49/@HostListner', value: ''},
       ]
     },
+    {
+      button: '50/@HostBinding',
+      ngif: 'obs',
+      ngifValue: false,
+      in: '50/@HostBinding',
+      input:[
+        { name: '50/@HostBinding', value: ''},
+      ]
+    },
+    {
+      button: '59/What is View Encapsulation',
+      ngif: 'obs',
+      ngifValue: false,
+      in: '59/What is View Encapsulation',
+      input:[
+        { name: '59/What is View Encapsulation', value: ''},
+      ]
+    },
+    {
+      button: '60/Service',
+      ngif: 'obs',
+      ngifValue: false,
+      input:[
+        { name: '60/Service', value: ''}, 
+      ]
+    },
+    {
+      button: '62/Dependency Injection',
+      ngif: 'obs',
+      ngifValue: false,
+      input:[
+        { name: '62/Dependency Injection', value: ''}, 
+      ]
+    },
   ]
   searchArray: ISearchArray[] = this.angularSearchArray;
         
@@ -377,8 +411,10 @@ export class LayoutComponent {
     this.createValue(this.ang16SearchArray[13], 'ang116-in');
     this.createValue(this.ang16SearchArray[14], 'ang116-in');
     this.createValue(this.ang16SearchArray[15], 'ang116-in');
-
-
+    this.createValue(this.ang16SearchArray[16], 'ang116-in');
+    this.createValue(this.ang16SearchArray[17], 'ang116-in');
+    this.createValue(this.ang16SearchArray[18], 'ang116');
+    this.createValue(this.ang16SearchArray[19], 'ang116');
     
     console.log('OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
     console.log(this.ang16SearchArray[13])
