@@ -80,6 +80,8 @@ import { HostbindingComponent } from './pages/ang16/hostbinding/hostbinding.comp
 import { ViewEncapsulationComponent } from './pages/ang16/view-encapsulation/view-encapsulation.component';
 import { N60serviceComponent } from './pages/ang16/60service/n60service/n60service.component';
 import { N62dependencyInjectionComponent } from './pages/ang16/n62dependency-injection/n62dependency-injection.component';
+import { N63HierarchicalDependencyInjecComponent } from './pages/ang16/n63-hierarchical-dependency-injec/n63-hierarchical-dependency-injec.component';
+import { N64hierarchicalInjectionPractiseComponent } from './pages/ang16/n64hierarchical-injection-practise/n64hierarchical-injection-practise.component';
 
 export const routes: Routes = [
     {
@@ -190,6 +192,10 @@ export const routes: Routes = [
                     { path: '60/service', component: N60serviceComponent},
 
                     { path: '62/dependency-injection', component: N62dependencyInjectionComponent},
+                    { path: '63/hierarchical-dependency-injection', component: N63HierarchicalDependencyInjecComponent},
+                    { path: '64/hierarchical-injection-practical-use-case', component: N64hierarchicalInjectionPractiseComponent},
+
+                    
                 ]
             }
         ]

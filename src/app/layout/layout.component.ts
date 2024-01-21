@@ -313,6 +313,8 @@ export class LayoutComponent {
       ngifValue: false,
       input:[
         { name: '62/Dependency Injection', value: ''}, 
+        { name: '63/Hierarchical Dependency Injection', value: ''},
+        { name: '64/Hierarchical Injection Practical Use Case', value: ''}
       ]
     },
   ]

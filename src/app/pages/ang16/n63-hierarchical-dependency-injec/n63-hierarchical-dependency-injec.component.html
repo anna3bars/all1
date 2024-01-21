@@ -1,0 +1,58 @@
+<br>
+<img src="/assets/img/ang16/63herarchicalDependencyInjection/01.png" width="100%" alt="">
+<p class="descrip">
+ so in our angular application we are providing a service in 
+ the header component there we are using the provider array,
+ we also providing the service in the hero component 
+ and sidebar component
+</p>
+<p class="mark">
+ but this three intances will be completely different!! <br>
+ -> that means if you do sth with instance 1 it is not going to affect 
+ instance 2 and instance 3 
+</p>
+<h2>
+ in whichever component we will use the provider array for 
+ that component we going to get a unique instance of the 
+ dependent service
+</h2>
+<hr><hr><br>
+<h2> Hierarchical Dependency Injection</h2>
+<img src="/assets/img/ang16/63herarchicalDependencyInjection/02.png" width="100%" alt="">
+<h4>
+ In a hierarchical dependency injection, same instance of a service class is injected in a
+ component and its child components and their child components.
+</h4>
+<img src="/assets/img/ang16/63herarchicalDependencyInjection/03.png" width="100%" alt="">
+<p class="mark">
+ so for the header component we ate going to get an instance of subscribeService,
+ let's call it subService, we are not using providers array in any other child component, so 
+ according to a herarchical Injection since we have used the provider's array
+ on the header component an instance of the service will be injected  in the 
+ header component and same instance will also get inject in all its 
+ child components and their child components
+</p>
+<img src="/assets/img/ang16/63herarchicalDependencyInjection/05.png" width="100%" alt="">
+<hr><hr><br>
+<img src="/assets/img/ang16/63herarchicalDependencyInjection/04.png" width="100%" alt="">
+<p class="descrip">
+ let's say I'm providing a service on the parent component and I'm also providing
+ the same service in the child component
+</p>
+<p class="mark">
+ for example here in the hero component also I'm providing the same service, so what will 
+ happen is inside this hero component -> inside this chil component we will get another
+  instance of that service and that instance will override the incantnce which we have 
+  receiving from the parent component
+</p>
+<img src="/assets/img/ang16/63herarchicalDependencyInjection/06.png" width="100%" alt="">
+<img src="/assets/img/ang16/63herarchicalDependencyInjection/07.png" width="100%" alt="">
+<img src="/assets/img/ang16/63herarchicalDependencyInjection/08.png" width="100%" alt="">
+<p>app.component.ts</p>
+<img src="/assets/img/ang16/63herarchicalDependencyInjection/09.png" width="100%" alt="">
+<p>app.module.ts</p>
+
+
+
+
+
