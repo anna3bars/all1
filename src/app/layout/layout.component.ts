@@ -314,7 +314,9 @@ export class LayoutComponent {
       input:[
         { name: '62/Dependency Injection', value: ''}, 
         { name: '63/Hierarchical Dependency Injection', value: ''},
-        { name: '64/Hierarchical Injection Practical Use Case', value: ''}
+        { name: '64/Hierarchical Injection Practical Use Case', value: ''},
+        { name: '65/Injecting Service into Another Service', value: ''},
+        { name: '66/Angular Injection Token', value: ''}
       ]
     },
   ]

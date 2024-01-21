@@ -1,0 +1,61 @@
+<p class="descrip">
+ we inject a service into a class by using a Constructor 
+</p>
+<p class="mark">
+ so in order to inject this logger servise inside this user service class 
+ what we are doing is we are creating a constructor 
+</p>
+<img src="/assets/img/ang16/66angularInjectionToken/01.png" alt="">
+<h4>
+ and using that construcor we ask angular to inject a service
+</h4>
+<h4>
+ and providing userservice from the app module
+</h4>
+<img src="/assets/img/ang16/66angularInjectionToken/02.png" alt="">
+<p class="descrip">
+ when we are providing this user service like this or any 
+ service for that matter this is just a syntatic sugar, this 
+ line is actually sth more, so behinde the scenes what angular 
+ does is, it converts this line , basically the type which we 
+ are specifying into an object
+</p>
+<p class="mark2">
+ and in that object we will have 2 properties, the provide property  and 
+ useClass property
+</p>
+<img src="/assets/img/ang16/66angularInjectionToken/03.png" width="100%" alt="">
+<p class="mark">
+ provide -> this property basically stores a unique identifier for [պահում է եզակի 
+ նույնացուցիչ]
+ registring the class which we also call as token and this token adds like 
+ a key,<br>
+ so the dependency injection system needs this key to locate the provider 
+ in the provider's array <br>
+ and this token can be either a type or a string or an instance of injection token
+</p>
+<p class="mark2">
+ useClass -> using this useClass we are specifying which class needs to be 
+ instantiated for that token
+</p>
+<img src="/assets/img/ang16/66angularInjectionToken/04.png" >
+<p class="mark3">
+ As I metioned this <br>
+ unique identifier [եզակի նույնացուցիչ] 
+ <br> can be a type, a string value or an injection token
+</p>
+<p class="descrip">
+ so instead of using type here let's go ahead and let's use a string value
+</p>
+<img src="/assets/img/ang16/66angularInjectionToken/05.png" >
+<br><br>
+<a href="https://www.youtube.com/watch?v=pydp8idgYUw&list=PL1BztTYDF-QNlGo5-g65Xj1mINHYk_FM9&index=66">
+ video of youtube
+</a>
+
+
+
+
+
+
+

@@ -82,6 +82,8 @@ import { N60serviceComponent } from './pages/ang16/60service/n60service/n60servi
 import { N62dependencyInjectionComponent } from './pages/ang16/n62dependency-injection/n62dependency-injection.component';
 import { N63HierarchicalDependencyInjecComponent } from './pages/ang16/n63-hierarchical-dependency-injec/n63-hierarchical-dependency-injec.component';
 import { N64hierarchicalInjectionPractiseComponent } from './pages/ang16/n64hierarchical-injection-practise/n64hierarchical-injection-practise.component';
+import { N65injectingServiceIntoAnotherServiceComponent } from './pages/ang16/n65injecting-service-into-another-service/n65injecting-service-into-another-service.component';
+import { N66angularInjectionTokenComponent } from './pages/ang16/n66angular-injection-token/n66angular-injection-token.component';
 
 export const routes: Routes = [
     {
@@ -194,6 +196,9 @@ export const routes: Routes = [
                     { path: '62/dependency-injection', component: N62dependencyInjectionComponent},
                     { path: '63/hierarchical-dependency-injection', component: N63HierarchicalDependencyInjecComponent},
                     { path: '64/hierarchical-injection-practical-use-case', component: N64hierarchicalInjectionPractiseComponent},
+                    { path: '65/injecting-service-into-another-service', component: N65injectingServiceIntoAnotherServiceComponent},
+                    { path: '66/angular-injection-token', component: N66angularInjectionTokenComponent},
+
 
                     
                 ]
