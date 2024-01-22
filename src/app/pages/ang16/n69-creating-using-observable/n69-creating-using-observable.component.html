@@ -1,0 +1,55 @@
+<div class="mark">
+ RxJS is a JavaScript library, that allows us to work with 
+ asynchronous data streams
+</div>
+<img src="/assets/img/ang16/69creatingUsingObservable/01.png" alt="">
+<br>
+<img src="/assets/img/ang16/69creatingUsingObservable/02.png" alt="">
+<p class="mark1">we import it from RxJs because</p>
+<img src="/assets/img/ang16/69creatingUsingObservable/03.png" alt="">
+<br>
+<p class="mark2">
+ w have creted an observable <br>
+ but this observable is not emitting any data
+</p>
+<img src="/assets/img/ang16/69creatingUsingObservable/04.png" alt="">
+<p class="mark3">
+ in order to make this observable emit some data, to 
+ this observable constructor we need to pass a callback function
+ <br><br>
+ and this callback function it is going to receive an argument ,let's 
+ call that argument observer,  we 
+ can name it anything
+</p>
+<p class="mark">
+ this observer it will be injected by rxjs library to tis 
+ callback function <br>
+ and this observer is nothing but the subscriber
+</p>
+<p>
+ if we want to emit some value wwe need to call next method
+ on the observer
+</p>
+<p class="mark2">
+ an obsever will emit a data only if there is any subscriber
+</p>
+<br>
+<img src="/assets/img/ang16/69creatingUsingObservable/05.png" alt="">
+<img src="/assets/img/ang16/69creatingUsingObservable/06.png" alt="">
+<p>other using example</p>
+<img src="/assets/img/ang16/69creatingUsingObservable/07.png" alt="">
+<p class="descrip">
+ the first callback function which we pass to this subscribe method 
+ it is a Handler function, for data which the observable emits
+</p>
+
+
+
+
+
+
+
+
+
+
+

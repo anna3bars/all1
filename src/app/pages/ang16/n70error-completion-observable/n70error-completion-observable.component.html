@@ -1,0 +1,50 @@
+<p class="mark">
+ to emit an error we use error mrthod
+</p>
+<img src="/assets/img/ang16/70errorCompletionObservable/01.png" alt="">
+<p>
+ and in console we see an error
+</p>
+<img src="/assets/img/ang16/70errorCompletionObservable/02.png" alt="">
+<p>
+ but it not always good to show these kind of error messages to the user
+</p>
+<p class="mark">
+ we are going to handle this error
+</p>
+<img src="/assets/img/ang16/70errorCompletionObservable/03.png" alt="">
+<p>
+ բայց էլի error-ից հետոի թվորը չի տպվի
+</p>
+<div class="mark3">
+ we can also emit a complete signal which tells that the observable 
+ has emmited all the data from the data stream
+</div>
+<img src="/assets/img/ang16/70errorCompletionObservable/04.png" alt="">
+<p class="descrip">
+ once the complete signal is emmited by an observable after that if we have 
+ any data to be emmited that will not get emmited
+</p>
+<h2>
+ the latest way how we can pass a callback function to the subscribe met
+</h2>
+<img src="/assets/img/ang16/70errorCompletionObservable/05.png" alt="">
+<p>
+ this keyword here it is pointing to an instance of this object,
+ not an instance of app.component.ts, and in this object we don't have 
+ any property called Data
+</p>
+<p class="mark">
+ here we can make use of Arrow function syntax, because 
+ when we have make use of Arrow function syntax, 
+ Arrow function does not gets its own this keyword, <br>
+ but iy uses the this keyword of its outer scope
+</p>
+<img src="/assets/img/ang16/70errorCompletionObservable/06.png" alt="">
+
+
+
+
+
+
+

@@ -84,6 +84,12 @@ import { N63HierarchicalDependencyInjecComponent } from './pages/ang16/n63-hiera
 import { N64hierarchicalInjectionPractiseComponent } from './pages/ang16/n64hierarchical-injection-practise/n64hierarchical-injection-practise.component';
 import { N65injectingServiceIntoAnotherServiceComponent } from './pages/ang16/n65injecting-service-into-another-service/n65injecting-service-into-another-service.component';
 import { N66angularInjectionTokenComponent } from './pages/ang16/n66angular-injection-token/n66angular-injection-token.component';
+import { N68whatIsAnObservableComponent } from './pages/ang16/n68what-is-an-observable/n68what-is-an-observable.component';
+import { N69CreatingUsingObservableComponent } from './pages/ang16/n69-creating-using-observable/n69-creating-using-observable.component';
+import { N70errorCompletionObservableComponent } from './pages/ang16/n70error-completion-observable/n70error-completion-observable.component';
+import { N71RxJSoffromOperatorComponent } from './pages/ang16/n71-rx-jsoffrom-operator/n71-rx-jsoffrom-operator.component';
+import { N72fromEventOperatorComponent } from './pages/ang16/n72from-event-operator/n72from-event-operator.component';
+import { N73RxJSmapfilterComponent } from './pages/ang16/n73-rx-jsmapfilter/n73-rx-jsmapfilter.component';
 
 export const routes: Routes = [
     {
@@ -198,6 +204,18 @@ export const routes: Routes = [
                     { path: '64/hierarchical-injection-practical-use-case', component: N64hierarchicalInjectionPractiseComponent},
                     { path: '65/injecting-service-into-another-service', component: N65injectingServiceIntoAnotherServiceComponent},
                     { path: '66/angular-injection-token', component: N66angularInjectionTokenComponent},
+
+                    { path: '68/what-is-an-observable', component: N68whatIsAnObservableComponent},
+                    { path: '69/creating-&-using-an-observable', component: N69CreatingUsingObservableComponent},
+                    { path: '70/error-&-completion-of-observable', component: N70errorCompletionObservableComponent},
+                    { path: '71/rxjs-of-&-from-operator', component: N71RxJSoffromOperatorComponent},
+                    { path: '72/the-fromevent-operator', component: N72fromEventOperatorComponent},
+                    { path: '73/rxjs-map-filter-operator', component: N73RxJSmapfilterComponent},
+
+                    
+
+
+
 
 
                     

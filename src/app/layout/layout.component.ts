@@ -319,6 +319,19 @@ export class LayoutComponent {
         { name: '66/Angular Injection Token', value: ''}
       ]
     },
+    {
+      button: '68/What is an Observable',
+      ngif: 'obs',
+      ngifValue: false,
+      input:[
+        { name: '68/What is an Observable', value: ''},
+        { name: '69/Creating & Using an Observable', value: ''},
+        { name: '70/Error & Completion of Observable', value: ''},
+        { name: '71/RxJS of & from Operator', value: ''},
+        { name: '72/The fromEvent Operator', value: ''},
+        { name: '73/RxJS map filter Operator', value: ''}
+      ]
+    },
   ]
   searchArray: ISearchArray[] = this.angularSearchArray;
         
@@ -419,6 +432,7 @@ export class LayoutComponent {
     this.createValue(this.ang16SearchArray[17], 'ang116-in');
     this.createValue(this.ang16SearchArray[18], 'ang116');
     this.createValue(this.ang16SearchArray[19], 'ang116');
+    this.createValue(this.ang16SearchArray[20], 'ang116');
     
     console.log('OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
     console.log(this.ang16SearchArray[13])
