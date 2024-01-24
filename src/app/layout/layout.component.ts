@@ -28,6 +28,10 @@ interface ISearchArray  {
 export class LayoutComponent {
   rot: boolean = false;
   def: boolean = true;
+  mobileShow: boolean = false;
+  showHumMenu(value: boolean){
+    this.mobileShow = value;
+  }
   
   angularSearchArray: ISearchArray[] = [
     {
@@ -305,6 +309,7 @@ export class LayoutComponent {
       ngifValue: false,
       input:[
         { name: '60/Service', value: ''}, 
+        { name: '67/Component Interaction', value: ''}
       ]
     },
     {
@@ -330,6 +335,15 @@ export class LayoutComponent {
         { name: '71/RxJS of & from Operator', value: ''},
         { name: '72/The fromEvent Operator', value: ''},
         { name: '73/RxJS map filter Operator', value: ''}
+      ]
+    },
+    {
+      button: '86/Implementing Routing in Angular',
+      ngif: 'obs',
+      ngifValue: false,
+      input:[
+        { name: '86/Implementing Routing in Angular', value: ''},
+        { name: '00/empty', value: ''},
       ]
     },
   ]
@@ -433,6 +447,7 @@ export class LayoutComponent {
     this.createValue(this.ang16SearchArray[18], 'ang116');
     this.createValue(this.ang16SearchArray[19], 'ang116');
     this.createValue(this.ang16SearchArray[20], 'ang116');
+    this.createValue(this.ang16SearchArray[21], 'ang116');
     
     console.log('OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
     console.log(this.ang16SearchArray[13])

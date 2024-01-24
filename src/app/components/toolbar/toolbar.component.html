@@ -2,5 +2,11 @@
     <a [routerLink]="'/l'" (click)="out('angular')">Angular</a>
     <a [routerLink]="'js'" (click)="out('js')">JS</a>
     <a [routerLink]="'ang16'" (click)="out('ang16')">Ang 16</a>
+
     <button class="toolbarButton" (click)="logOut()">Log out</button>
+    <div class="sc" (click)="showMenu()">
+        <span #sp1 [ngClass]="{'sc1': addSc, 'scs': !addSc}"></span>
+        <span #sp2 [ngClass]="{'sc2': addSc2}"></span>
+        <span #sp3 [ngClass]="{'sc3': addSc3, 'scs': !addSc3}"></span>
+    </div>
 </div>

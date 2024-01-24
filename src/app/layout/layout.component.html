@@ -1,6 +1,22 @@
-<app-toolbar (change)="change($event)"></app-toolbar>
+<app-toolbar (change)="change($event)" (showHumburgerMenu)="showHumMenu($event)"></app-toolbar>
 <div class="container">
-    <div class="chooseMobile"></div>
+    <div class="chooseMobile3" [ngClass]="{'mob3': !mobileShow, 'mob3t': mobileShow}">
+        <div class="mob3cont">
+            <div *ngFor="let item of searchArray">
+                <button *ngIf="!item.in" (click)="button()" (click)="item.ngifValue = !item.ngifValue">
+                    {{item.button}}
+                    <span [ngClass]="{'rotate': rot, 'default': !rot}">&#62;</span>
+                </button>
+                <a *ngIf="item.in" [routerLink]="item.in" class="buttonA">{{item.button}}</a>
+                <div *ngIf="item.ngifValue">
+                    <div class="butCont" *ngFor="let i of item.input">
+                        <a [routerLink]="i.value">{{i.name}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="chooseMobile"></div>
     <div class="chooseMobile2">
         <div *ngFor="let item of searchArray">
             <button *ngIf="!item.in" (click)="button()" (click)="item.ngifValue = !item.ngifValue">
@@ -14,8 +30,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="choose">
+    </div> -->
+    <div class="choose" id="choose">
         <!-- <div *ngFor="let item of searchArray">
             <a [routerLink]="''+item.val">{{item.val}}</a>
         </div>
@@ -36,12 +52,13 @@
 
 
 
-<div class="content">
+<div class="content" id="content">
     <!-- <app-toolbar (change)="change()"></app-toolbar> -->
-    <div class="cont">
+    <!-- <app-toolbar (change)="change($event)" (showHumburgerMenu)="showHumMenu($event)"></app-toolbar> -->
+    <div class="cont" id="cont">
         <router-outlet></router-outlet>
     </div>
-    <div class="path">
+    <!-- <div class="path">
         <div *ngFor="let item of searchArray">
             <ul>
                 <li class="butCont" *ngFor="let i of item.input">
@@ -51,5 +68,5 @@
             </ul>
             
         </div>
-    </div>
+    </div> -->
 </div>

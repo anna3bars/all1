@@ -90,6 +90,9 @@ import { N70errorCompletionObservableComponent } from './pages/ang16/n70error-co
 import { N71RxJSoffromOperatorComponent } from './pages/ang16/n71-rx-jsoffrom-operator/n71-rx-jsoffrom-operator.component';
 import { N72fromEventOperatorComponent } from './pages/ang16/n72from-event-operator/n72from-event-operator.component';
 import { N73RxJSmapfilterComponent } from './pages/ang16/n73-rx-jsmapfilter/n73-rx-jsmapfilter.component';
+import { N67componentInteractionComponent } from './pages/ang16/n67component-interaction/n67component-interaction.component';
+import { R86implementingRoutingComponent } from './pages/ang16/r86implementing-routing/r86implementing-routing.component';
+import { EmptyComponent } from './pages/ang16/empty/empty.component';
 
 export const routes: Routes = [
     {
@@ -198,6 +201,7 @@ export const routes: Routes = [
                     { path: '59/what-is-view-encapsulation', component: ViewEncapsulationComponent},
                     
                     { path: '60/service', component: N60serviceComponent},
+                    { path: '67/component-interaction', component: N67componentInteractionComponent},
 
                     { path: '62/dependency-injection', component: N62dependencyInjectionComponent},
                     { path: '63/hierarchical-dependency-injection', component: N63HierarchicalDependencyInjecComponent},
@@ -212,7 +216,9 @@ export const routes: Routes = [
                     { path: '72/the-fromevent-operator', component: N72fromEventOperatorComponent},
                     { path: '73/rxjs-map-filter-operator', component: N73RxJSmapfilterComponent},
 
-                    
+                    { path: '86/implementing-routing-in-angular', component: R86implementingRoutingComponent},
+
+                    { path: '00/empty', component: EmptyComponent}
 
 
 

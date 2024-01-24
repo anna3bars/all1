@@ -5,11 +5,12 @@
 }
 .toolbar {
     padding: 16px 15px;
-    padding: 16px 15px 16px 347px;
+    /* padding: 16px 15px 16px 24%; */
     position: fixed;
-    /* z-index: 150000; */
     width: 100%;
     display: flex;
+    left: 22%;
+    z-index: 15000;
 }
 .toolbar a {
     display: block;
@@ -22,12 +23,54 @@
     color: black;
     border: none;
 }
-
-
-
-
-
-
+.sc span {
+    display: block;
+    background-color: white;
+    width: 32px;
+    height: 3px;
+    margin-bottom: 6px;
+}
+.sc {
+    margin: 0 10px;
+    display: none;
+}
+@media only screen and (max-width: 1025px){
+    .toolbar {
+        left: 0 !important;
+        padding: 16px 43px !important;
+    }
+    .sc {
+        display: block;
+    }
+}
+/* @media screen and (max-width: 768px ){
+    .sc {
+        display: block;
+    }
+    .toolbarButton {
+        display: none;
+    }
+    .toolbar {
+        left: 0 !important;
+        padding: 16px 43px !important;
+    }
+} */
+.sc1 {
+    transform: rotate(45deg);
+    margin-top: 14px;
+    transition: all 0.3s ease 0s;
+}
+.scs {
+    transition: all 0.3s ease 0s;
+}
+.sc3 {
+    transform: rotate(-45deg);
+    margin-top: -10px;
+    transition: all 0.3s ease 0s;
+}
+.sc2 {
+    display: none !important;
+}
 
 
 

@@ -9,10 +9,29 @@
     bottom: 0;
     background-color: #303030;
 }
+.mob3 {
+    display: none;
+    position: absolute;
+}
+.mob3t {
+    position: fixed;
+    width: 100%;
+    top: 61px;
+    background-color: #303030;
+    border-bottom: 2px solid white;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-top: 4px;
+    transition: all 0.3s ease 0s;
+}
+.mob3t .mob3cont {
+    width: 91%;
+    margin: auto;
+}
 .chooseMobile {
     display: none;
 }
-.choose a, .chooseMobile2 a {
+.choose a, .chooseMobile2 a, .chooseMobile3 a {
     display: block;
     padding: 5px 6px;
     background-color: lightslategray;
@@ -24,7 +43,7 @@
     text-decoration: none;
     font-size: 14px;
 }
-.choose a:hover, .chooseMobile2 a:hover {
+.choose a:hover, .chooseMobile2 a:hover, .chooseMobile3 a:hover {
     background-color: darkgray;
     /* transform: scale(1.05); */
     border: 1px dashed #ffffff82;
@@ -34,18 +53,19 @@ p {
     margin-bottom: 25px;
 }
 .content {
-    margin-left: 301px;
+    margin-left: 23%;
     display: flex;
     justify-content: space-between;
 }
 .cont {
-    padding: 15px;
-    padding-top: 58px;
-    width: 79%;
+    width: 100%;
+    padding-top: 74px;
+    padding-right: 4%;
 }
 .path {
     width: 20%;
     padding-top: 83px;
+    margin-right: 44px !important;
 }
 /* ---------------BUTTON---------------------------------- */
 button span {
@@ -75,73 +95,125 @@ ul, ol {
     font-weight: 900;
     font-style: 17px;
 }
+@media only screen and (max-width: 1225px){
+    button {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1025px){
+    .choose[_ngcontent-ng-c2003533168], .chooseMobile2[_ngcontent-ng-c2003533168],
+    #choose {
+        display: none !important;
+    }
+    .content[_ngcontent-ng-c2003533168], #content {
+        margin-left: 0;
+    }
+    .cont[_ngcontent-ng-c2003533168], #cont {
+        width: 90%;
+        margin: auto;
+    }
+    #cont {
+        width: 90%;
+        margin: auto;
+    }
+}
+
 
 /* -------------------------------------------------- */
-@media only screen and (max-width: 2560px){
-    .choose a, button {
-        font-size: 24px;
+/* @media only screen and (max-width: 2560px){
+    button, .choose a, p, * {
+        font-size: 25px;
     }
-    .choose {
-        width: 22%;
-    }
-    .content {
-        margin-left: 22%;
-    }
-    * {
-        font-size: 27px;
-    }
-}
-@media only screen and (max-width: 2160px){
     .pathA {
-        font-size: 18px;
+        font-size: 22px;
     }
-    .choose {
-        width: 22%;
-    }
-    .choose a, button {
+} */
+/* @media only screen and (max-width: 1920px){
+    button, .choose a, p, * {
         font-size: 23px;
     }
-    .content[_ngcontent-ng-c2105455472] {
-        margin-left: 22% !important;
+    .pathA {
+        font-size: 19px;
     }
 }
-@media only screen and (max-width: 1760px){
-    .choose a, button {
-        font-size: 20px;
-    }
-    * {
-        font-size: 20px;
-    }
-}
-@media only screen and (max-width: 1420px){
-    .choose a, button, * {
+@media only screen and (max-width: 1536px){
+    button, .choose a, p, * {
         font-size: 14px;
+    }
+    .pathA {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    button, .choose a, p, * {
+        font-size: 15px;
     }
     .pathA {
         font-size: 12px;
     }
+    .path {
+        display: none !important;
+    }
+    .cont[_ngcontent-ng-c3180285103] {
+        padding: 15px;
+        padding-top: 58px;
+        width: 96%;
+    }
 }
-@media only screen and (max-width: 1220px){
-    .choose a, button, * {
+@media only screen and (max-width: 1024px){
+    button, .choose a, p, * {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 768px ){
+    button, .choose a, p, * {
         font-size: 13px;
     }
     .pathA {
-        font-size: 11px;
+        font-size: 15px;
     }
-}
-@media only screen and (max-width: 766px){
-    .path {
+    .content {
+        margin-left: 0 !important;
+    }
+    .cont {
+        width: 100% !important;
+    }
+    .chooseMobile2 {
         display: none;
     }
-    .cont[_ngcontent-ng-c2105455472] {
-        padding: 15px;
-        padding-top: 69px;
-        width: 100% !important
+    .content {
+        margin-left: 0 !important;
+    }
+    .content {
+        margin-left: 0 !important;
+    }
+    .cont {
+        width: 100% !important;
+    }
+    .content[_ngcontent-ng-c2119428078] {
+        margin-left: 0 !important;
     }
     .choose {
-        display: none !important;
+        display: none;
+    }
+    .container {
+        padding: 0 19px;
     }
 }
+@media only screen and (max-width: 320px){
+    button, .choose a, p, * {
+        font-size: 12px;
+    }
+    .pathA {
+        font-size: 13px;
+    }
+}
+
+
+ */
+
+
 
 
 
