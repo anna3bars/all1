@@ -343,7 +343,32 @@ export class LayoutComponent {
       ngifValue: false,
       input:[
         { name: '86/Implementing Routing in Angular', value: ''},
-        { name: '00/empty', value: ''},
+        { name: '90/Relative vs Absolute Route Path', value: ''},
+        { name: '91/Navigating between Routes Programmatically', value: ''},
+        { name: '92/Working with Route Parameters', value: ''},
+        { name: '93/Retrieving Route Parameter Value', value: ''},
+        { name: '97/Creating a Route Module File', value: ''},
+      ]
+    },
+    {
+      button: '98/What is a Route Guard',
+      ngif: 'obs',
+      ngifValue: false,
+      input:[
+        { name: '98/What is a Route Guard', value: ''},
+        { name: '100/CanActivate Route Guard', value: ''},
+        { name: '102/CanActivateChild Route Guard', value: ''},
+        { name: '103/CanDeactivate Route Guard', value: ''}
+      ]
+    },
+    {
+      button: '113/Introduction to Template Driven Form',
+      ngif: 'obs',
+      ngifValue: false,
+      input:[
+        { name: '113/Introduction to Template Driven Form', value: ''},
+        { name: '114/Reading Form Control Values', value: ''},
+        { name: '115/Touched & Dirty Form Property', value: ''}
       ]
     },
   ]
@@ -448,7 +473,10 @@ export class LayoutComponent {
     this.createValue(this.ang16SearchArray[19], 'ang116');
     this.createValue(this.ang16SearchArray[20], 'ang116');
     this.createValue(this.ang16SearchArray[21], 'ang116');
-    
+    this.createValue(this.ang16SearchArray[22], 'ang116');
+    this.createValue(this.ang16SearchArray[23], 'ang116');
+
+
     console.log('OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
     console.log(this.ang16SearchArray[13])
     console.log('OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')

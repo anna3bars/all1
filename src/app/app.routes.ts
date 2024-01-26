@@ -93,6 +93,19 @@ import { N73RxJSmapfilterComponent } from './pages/ang16/n73-rx-jsmapfilter/n73-
 import { N67componentInteractionComponent } from './pages/ang16/n67component-interaction/n67component-interaction.component';
 import { R86implementingRoutingComponent } from './pages/ang16/r86implementing-routing/r86implementing-routing.component';
 import { EmptyComponent } from './pages/ang16/empty/empty.component';
+import { R90relativeAbsoluteRoutePathComponent } from './pages/ang16/r90relative-absolute-route-path/r90relative-absolute-route-path.component';
+import { R91NavigatingbetweenRoutesProgrammaticallyComponent } from './pages/ang16/r91-navigatingbetween-routes-programmatically/r91-navigatingbetween-routes-programmatically.component';
+import { R92WorkingwithRouteParametersComponent } from './pages/ang16/r92-workingwith-route-parameters/r92-workingwith-route-parameters.component';
+import { R93RetrievingRouteParameterValueComponent } from './pages/ang16/r93-retrieving-route-parameter-value/r93-retrieving-route-parameter-value.component';
+import { R97CreatingaRouteModuleFileComponent } from './pages/ang16/r97-creatinga-route-module-file/r97-creatinga-route-module-file.component';
+import { R98whatisaRouteGuardComponent } from './pages/ang16/r98whatisa-route-guard/r98whatisa-route-guard.component';
+import { CanactivateRouteGuardComponent } from './pages/ang16/r100/canactivate-route-guard/canactivate-route-guard.component';
+import { R102CanActivateChildRouteGuardComponent } from './pages/ang16/r102-can-activate-child-route-guard/r102-can-activate-child-route-guard.component';
+import { R103candeactivateRouteGuardComponent } from './pages/ang16/r103candeactivate-route-guard/r103candeactivate-route-guard.component';
+import { F113introductionToTemplateDrivenFormComponent } from './pages/ang16/f113introduction-to-template-driven-form/f113introduction-to-template-driven-form.component';
+import { Ff114readingformcontrolvaluesComponent } from './pages/ang16/ff114readingformcontrolvalues/ff114readingformcontrolvalues.component';
+import { F115TouchedDirtyFormPropertyComponent } from './pages/ang16/f115-touched-dirty-form-property/f115-touched-dirty-form-property.component';
+
 
 export const routes: Routes = [
     {
@@ -218,13 +231,25 @@ export const routes: Routes = [
 
                     { path: '86/implementing-routing-in-angular', component: R86implementingRoutingComponent},
 
-                    { path: '00/empty', component: EmptyComponent}
+                    { path: '90/relative-vs-absolute-route-path', component: R90relativeAbsoluteRoutePathComponent},
+                    { path: '91/navigating-between-routes-programmatically', component: R91NavigatingbetweenRoutesProgrammaticallyComponent},
+                    { path: '92/working-with-route-parameters', component: R92WorkingwithRouteParametersComponent},
+                    { path: '93/retrieving-route-parameter-value', component: R93RetrievingRouteParameterValueComponent},
+                    { path: '97/creating-a-route-module-file', component: R97CreatingaRouteModuleFileComponent},
+
+                    { path: '98/what-is-a-route-guard', component: R98whatisaRouteGuardComponent},
+                    { path: '100/canactivate-route-guard', component: CanactivateRouteGuardComponent},
+                    { path: '102/canactivatechild-route-guard', component: R102CanActivateChildRouteGuardComponent},
+                    { path: '103/candeactivate-route-guard', component: R103candeactivateRouteGuardComponent},
+
+                    { path: '113/introduction-to-template-driven-form', component: F113introductionToTemplateDrivenFormComponent},
+                    { path: '114/reading-form-control-values', component: Ff114readingformcontrolvaluesComponent},
+                    { path: '115/touched-&-dirty-form-property', component: F115TouchedDirtyFormPropertyComponent},
 
 
 
 
 
-                    
                 ]
             }
         ]
