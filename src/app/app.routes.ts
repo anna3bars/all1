@@ -105,6 +105,10 @@ import { R103candeactivateRouteGuardComponent } from './pages/ang16/r103candeact
 import { F113introductionToTemplateDrivenFormComponent } from './pages/ang16/f113introduction-to-template-driven-form/f113introduction-to-template-driven-form.component';
 import { Ff114readingformcontrolvaluesComponent } from './pages/ang16/ff114readingformcontrolvalues/ff114readingformcontrolvalues.component';
 import { F115TouchedDirtyFormPropertyComponent } from './pages/ang16/f115-touched-dirty-form-property/f115-touched-dirty-form-property.component';
+import { F117FormValidationTemplateDriveFormComponent } from './pages/ang16/f117-form-validation-template-drive-form/f117-form-validation-template-drive-form.component';
+import { F119GroupingofFormControlsTemplatesDrivenComponent } from './pages/ang16/f119-groupingof-form-controls-templates-driven/f119-groupingof-form-controls-templates-driven.component';
+import { F121RessetingTemplateDrivenFormComponent } from './pages/ang16/f121-resseting-template-driven-form/f121-resseting-template-driven-form.component';
+import { F122retrievingFormDataComponent } from './pages/ang16/f122retrieving-form-data/f122retrieving-form-data.component';
 
 
 export const routes: Routes = [
@@ -245,9 +249,10 @@ export const routes: Routes = [
                     { path: '113/introduction-to-template-driven-form', component: F113introductionToTemplateDrivenFormComponent},
                     { path: '114/reading-form-control-values', component: Ff114readingformcontrolvaluesComponent},
                     { path: '115/touched-&-dirty-form-property', component: F115TouchedDirtyFormPropertyComponent},
-
-
-
+                    { path: '117/form-validation-template-driven-form', component: F117FormValidationTemplateDriveFormComponent},
+                    { path: '119/grouping-of-form-controls', component: F119GroupingofFormControlsTemplatesDrivenComponent},
+                    { path: '121/resseting-a-template-driven-form', component: F121RessetingTemplateDrivenFormComponent},
+                    { path: '122/retrieving-form-data', component: F122retrievingFormDataComponent},
 
 
                 ]

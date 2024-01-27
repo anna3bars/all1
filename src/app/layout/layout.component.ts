@@ -368,7 +368,11 @@ export class LayoutComponent {
       input:[
         { name: '113/Introduction to Template Driven Form', value: ''},
         { name: '114/Reading Form Control Values', value: ''},
-        { name: '115/Touched & Dirty Form Property', value: ''}
+        { name: '115/Touched & Dirty Form Property', value: ''},
+        { name: '117/Form Validation Template Driven Form', value: ''},
+        { name: '119/Grouping of Form Controls', value: ''},
+        { name: '121/Resseting a Template Driven Form', value: ''},
+        { name: '122/Retrieving Form Data', value: ''}
       ]
     },
   ]
