@@ -393,7 +393,8 @@ export class LayoutComponent {
       ngifValue: false,
       input:[
         { name: '136/Introduction to HTTP Request and Response', value: ''},
-        { name: '138/Creating Records with HTTP Post Request', value: ""}
+        { name: '138/Creating Records with HTTP Post Request', value: ""},
+        { name: '139/Fetching Data with HTTP GET Request', value: ''}
       ]
     },
   ]

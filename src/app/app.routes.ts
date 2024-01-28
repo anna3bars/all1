@@ -116,6 +116,7 @@ import { F128CreatingandusingFormArrayComponent } from './pages/ang16/f128-creat
 import { F129AddingFormControlsDynamicallyComponent } from './pages/ang16/f129-adding-form-controls-dynamically/f129-adding-form-controls-dynamically.component';
 import { H136IntroductiontoHTTPRequestResponseComponent } from './pages/ang16/h136-introductionto-httprequest-response/h136-introductionto-httprequest-response.component';
 import { H138creatingRecordswithHTTPostRequestComponent } from '../assets/img/ang16/h138creating-recordswith-httpost-request/h138creating-recordswith-httpost-request.component';
+import { H139FetchingDatawithHTTPGETRequestComponent } from './pages/ang16/h139-fetching-datawith-httpgetrequest/h139-fetching-datawith-httpgetrequest.component';
 
 
 export const routes: Routes = [
@@ -269,7 +270,7 @@ export const routes: Routes = [
 
                     { path: '136/introduction-to-http-request-and-response', component: H136IntroductiontoHTTPRequestResponseComponent},
                     { path: '138/creating-records-with-http-post-request', component: H138creatingRecordswithHTTPostRequestComponent},
-
+                    { path: '139/fetching-data-with-http-get-request', component: H139FetchingDatawithHTTPGETRequestComponent},
 
 
                     
