@@ -109,6 +109,13 @@ import { F117FormValidationTemplateDriveFormComponent } from './pages/ang16/f117
 import { F119GroupingofFormControlsTemplatesDrivenComponent } from './pages/ang16/f119-groupingof-form-controls-templates-driven/f119-groupingof-form-controls-templates-driven.component';
 import { F121RessetingTemplateDrivenFormComponent } from './pages/ang16/f121-resseting-template-driven-form/f121-resseting-template-driven-form.component';
 import { F122retrievingFormDataComponent } from './pages/ang16/f122retrieving-form-data/f122retrieving-form-data.component';
+import { F124IntroductiontoReactiveFormsComponent } from './pages/ang16/f124-introductionto-reactive-forms/f124-introductionto-reactive-forms.component';
+import { F125FormValidationinReactiveFormComponent } from './pages/ang16/f125-form-validationin-reactive-form/f125-form-validationin-reactive-form.component';
+import { F127GroupingofFormControlsComponent } from './pages/ang16/f127-groupingof-form-controls/f127-groupingof-form-controls.component';
+import { F128CreatingandusingFormArrayComponent } from './pages/ang16/f128-creatingandusing-form-array/f128-creatingandusing-form-array.component';
+import { F129AddingFormControlsDynamicallyComponent } from './pages/ang16/f129-adding-form-controls-dynamically/f129-adding-form-controls-dynamically.component';
+import { H136IntroductiontoHTTPRequestResponseComponent } from './pages/ang16/h136-introductionto-httprequest-response/h136-introductionto-httprequest-response.component';
+import { H138creatingRecordswithHTTPostRequestComponent } from '../assets/img/ang16/h138creating-recordswith-httpost-request/h138creating-recordswith-httpost-request.component';
 
 
 export const routes: Routes = [
@@ -254,7 +261,18 @@ export const routes: Routes = [
                     { path: '121/resseting-a-template-driven-form', component: F121RessetingTemplateDrivenFormComponent},
                     { path: '122/retrieving-form-data', component: F122retrievingFormDataComponent},
 
+                    { path: '124/introduction-to-reactive-forms', component: F124IntroductiontoReactiveFormsComponent},
+                    { path: '125/form-validation-in-reactive-form', component: F125FormValidationinReactiveFormComponent},
+                    { path: '127/grouping-of-form-controls', component: F127GroupingofFormControlsComponent},
+                    { path: '128/creating-and-using-form-array', component: F128CreatingandusingFormArrayComponent},
+                    { path: '129/adding-form-controls-dynamically', component: F129AddingFormControlsDynamicallyComponent},
 
+                    { path: '136/introduction-to-http-request-and-response', component: H136IntroductiontoHTTPRequestResponseComponent},
+                    { path: '138/creating-records-with-http-post-request', component: H138creatingRecordswithHTTPostRequestComponent},
+
+
+
+                    
                 ]
             }
         ]

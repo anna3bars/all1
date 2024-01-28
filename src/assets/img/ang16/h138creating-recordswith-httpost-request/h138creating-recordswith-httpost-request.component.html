@@ -1,0 +1,46 @@
+<p class="mark">
+ when we want to create a new record in the database we need to send 
+ an HTTP post request to the server <br>
+ and with the post request we also need to send a request body which 
+ will contain the data we want to create a new record in the database
+</p>
+<h4>first we need to import HttpClientModule in app.module.ts</h4>
+<img src="/assets/img/ang16/h138creating-recordswith-httpost-request/01.png" alt="">
+<p>in component</p>
+<img src="/assets/img/ang16/h138creating-recordswith-httpost-request/02.png" alt="">
+<br>
+<img src="/assets/img/ang16/h138creating-recordswith-httpost-request/03.png" alt="">
+<img src="/assets/img/ang16/h138creating-recordswith-httpost-request/04.png" alt="">
+<p class="mark2">
+ Now when I'm clciking on this create task button you will 
+ notice that two requests has been sent here
+</p>
+<p>devtools -> network</p>
+<img src="/assets/img/ang16/h138creating-recordswith-httpost-request/05.png" alt="">
+<p class="mark">
+ we have two requests because this is the default behaviour of a browser <br>
+ whenever we make post request to th server the browser will make 2 requests, the first 
+ request will be of type OPTIONS and then if that request will return a success message
+ as you can see in this case it is returning the success code 200, then only the 
+ browser will make another actual post request to the server , if it does not
+ return a success message in that case the post request will not be made
+</p>
+<h4>
+ so this options request simply chechks if the post request is allowed to be sent 
+ to the server or not
+</h4>
+<img src="/assets/img/ang16/h138creating-recordswith-httpost-request/06.png" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+

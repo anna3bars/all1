@@ -375,6 +375,27 @@ export class LayoutComponent {
         { name: '122/Retrieving Form Data', value: ''}
       ]
     },
+    {
+      button: '124/Introduction to Reactive Forms',
+      ngif: 'obs',
+      ngifValue: false,
+      input:[
+        { name: '124/Introduction to Reactive Forms', value: ''},
+        { name: '125/Form Validation in Reactive Form', value: ''},
+        { name: '127/Grouping of Form Controls', value: ''},
+        { name: '128/Creating and using Form Array', value: ''},
+        { name: '129/Adding Form Controls Dynamically', value: ''}
+      ]
+    },
+    {
+      button: '136/Introduction to HTTP Request and Response',
+      ngif: 'obs',
+      ngifValue: false,
+      input:[
+        { name: '136/Introduction to HTTP Request and Response', value: ''},
+        { name: '138/Creating Records with HTTP Post Request', value: ""}
+      ]
+    },
   ]
   searchArray: ISearchArray[] = this.angularSearchArray;
         
@@ -479,7 +500,8 @@ export class LayoutComponent {
     this.createValue(this.ang16SearchArray[21], 'ang116');
     this.createValue(this.ang16SearchArray[22], 'ang116');
     this.createValue(this.ang16SearchArray[23], 'ang116');
-
+    this.createValue(this.ang16SearchArray[24], 'ang116');
+    this.createValue(this.ang16SearchArray[25], 'ang116');
 
     console.log('OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
     console.log(this.ang16SearchArray[13])
