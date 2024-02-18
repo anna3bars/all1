@@ -117,6 +117,7 @@ import { F129AddingFormControlsDynamicallyComponent } from './pages/ang16/f129-a
 import { H136IntroductiontoHTTPRequestResponseComponent } from './pages/ang16/h136-introductionto-httprequest-response/h136-introductionto-httprequest-response.component';
 import { H138creatingRecordswithHTTPostRequestComponent } from '../assets/img/ang16/h138creating-recordswith-httpost-request/h138creating-recordswith-httpost-request.component';
 import { H139FetchingDatawithHTTPGETRequestComponent } from './pages/ang16/h139-fetching-datawith-httpgetrequest/h139-fetching-datawith-httpgetrequest.component';
+import { GsapComponent } from './pages/gsap/gsap/gsap.component';
 
 
 export const routes: Routes = [
@@ -275,7 +276,14 @@ export const routes: Routes = [
 
                     
                 ]
-            }
+            },
+            { 
+                path: 'gsap',
+                component: GsapComponent,
+                children: [
+                    { path: "creative-scroll-youtube-video", component: GsapComponent},
+                ]
+            },
         ]
     },
                        

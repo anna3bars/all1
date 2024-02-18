@@ -398,9 +398,25 @@ export class LayoutComponent {
       ]
     },
   ]
+  gsapSearchArray: ISearchArray[] = [
+    {
+      button: 'creative scroll youtube video',
+      ngif: 'obs',
+      ngifValue: false,
+      in: 'creative scroll youtube video',
+      input:[
+        { name: 'creative scroll youtube video', value: ''},
+      ]
+    }
+  ]
   searchArray: ISearchArray[] = this.angularSearchArray;
         
   createValue(arr: ISearchArray, name: string){
+    if(name == 'gsap'){
+      if(arr.in){
+        arr.in = 'gsap' + '/' + arr.in?.toLowerCase().replaceAll(' ', '-');
+      }
+    }
     console.log('Arr');
     console.log(arr);
     console.log('-');
@@ -503,6 +519,7 @@ export class LayoutComponent {
     this.createValue(this.ang16SearchArray[23], 'ang116');
     this.createValue(this.ang16SearchArray[24], 'ang116');
     this.createValue(this.ang16SearchArray[25], 'ang116');
+    this.createValue(this.gsapSearchArray[0], 'gsap')
 
     console.log('OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO')
     console.log(this.ang16SearchArray[13])
@@ -513,6 +530,10 @@ export class LayoutComponent {
       this.searchArray = this.jsSearchArray;
     } else if(location.pathname.includes('/l/ang')) {
       this.searchArray = this.angularSearchArray;
+    } else if(location.pathname.includes('/l/gsap')) {
+      this.searchArray = this.gsapSearchArray;
+      console.log('GSAAAAAAAAAAAAAAAAAAAAP');
+      
     }
   }
   change(text: string){
